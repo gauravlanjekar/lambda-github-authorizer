@@ -1,0 +1,38 @@
+{
+  "name": "lambda-github-authenticator",
+  "version": "0.0.1",
+  "description": "An AWS Lambda function to provide an oidc github Authenticator for AWS API Gateway ( tested with key-cloak). Inspired from lambda-oidc-authorizer",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/lambda-local -l index.js -e event.json",
+    "zip": "rm -f lambda-github-authenticator.zip ; zip lambda-github-authenticator.zip -r *.js *.json .env node_modules/"
+  },
+  "author": "Gaurav Lanjekar",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "dotenv": "^2.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "lambda-local": "1.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravlanjekar/lambda-github-authorizer.git"
+  },
+  "keywords": [
+    "aws",
+    "api-gateway",
+    "github",
+    "oauth2",
+    "custom-authorizer",
+    "authentication",
+    "lambda"
+  ],
+  "bugs": {
+    "url": "https://github.com/gauravlanjekar/lambda-github-authorizer/issues"
+  },
+  "homepage": "https://github.com/gauravlanjekar/lambda-github-authorizer#readme"
+}
